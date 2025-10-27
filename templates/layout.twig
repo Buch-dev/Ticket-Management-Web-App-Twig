@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TicketFlow (Twig)</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f9fafb;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="dashboard.php" class="text-2xl font-bold text-blue-600">
+          TicketFlow
+        </a>
+
+        <div class="flex items-center gap-4">
+          <a href="dashboard.php" class="text-gray-600 hover:text-gray-900">Dashboard</a>
+          <a href="tickets.php" class="text-gray-600 hover:text-gray-900">Tickets</a>
+          <a href="logout.php" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition">
+            Logout
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 py-10">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-10">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <p>&copy; 2025 TicketFlow. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

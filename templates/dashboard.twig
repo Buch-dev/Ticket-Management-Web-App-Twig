@@ -1,0 +1,32 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<h2 class="text-3xl font-bold mb-8">Dashboard</h2>
+
+<div class="grid md:grid-cols-4 gap-6 mb-8">
+  <div class="bg-white p-6 rounded-xl shadow-md">
+    <h3 class="text-gray-600 text-sm mb-2">Total Tickets</h3>
+    <p class="text-4xl font-bold text-blue-600">{{ stats.total }}</p>
+  </div>
+
+  <div class="bg-white p-6 rounded-xl shadow-md">
+    <h3 class="text-gray-600 text-sm mb-2">Open</h3>
+    <p class="text-4xl font-bold text-green-600">{{ stats.open }}</p>
+  </div>
+
+  <div class="bg-white p-6 rounded-xl shadow-md">
+    <h3 class="text-gray-600 text-sm mb-2">In Progress</h3>
+    <p class="text-4xl font-bold text-amber-600">{{ stats.inProgress }}</p>
+  </div>
+
+  <div class="bg-white p-6 rounded-xl shadow-md">
+    <h3 class="text-gray-600 text-sm mb-2">Closed</h3>
+    <p class="text-4xl font-bold text-gray-600">{{ stats.closed }}</p>
+  </div>
+</div>
+
+<a href="tickets.php"
+  class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+  Manage Tickets
+</a>
+{% endblock %}

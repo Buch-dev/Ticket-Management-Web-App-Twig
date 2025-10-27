@@ -1,0 +1,17 @@
+{
+    "name": "lenovo/ticket-management-app-twig",
+    "autoload": {
+        "psr-4": {
+            "Lenovo\\TicketManagementAppTwig\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Daniel Okafor",
+            "email": "bucheed@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.21"
+    }
+}
